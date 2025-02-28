@@ -385,7 +385,7 @@ function positionBalloonAndMariContainerHorizontally() {
     mariMaxHorizontalDistance = .5 * containerDiv.offsetWidth + 0;
     var t = .5 * containerDiv.offsetWidth + e;
     mariMaxHorizontalDistance <= t && (t = mariMaxHorizontalDistance);
-    var i = .5 * containerDiv.offsetWidth - 200,
+    var i = .5 * containerDiv.offsetWidth - 150,
         n = .5 * (containerDiv.offsetWidth - balloonDiv.offsetWidth) + e;
     i <= n && (n = i), "vertical" == layersMovement ? (balloonDiv.style.left = n + "px", mariContainerDiv.style.left = t + "px", mariContainerDiv.classList.add("marismoving")) : "not moving 1" == layersMovement || "not moving 2" == layersMovement ? (mariContainerDiv.style.left = t + pageVerticalPosition - (pageDiv.offsetHeight - containerDiv.offsetHeight - distanceBetweenMariAndBalloon) + "px", balloonDiv.style.left = n + "px") : (balloonDiv.style.left = layerHorizontalArray[layerHorizontalArray.length - 1].offsetLeft + layerHorizontalArray[layerHorizontalArray.length - 1].offsetWidth - .5 * (containerDiv.offsetWidth + balloonDiv.offsetWidth) + "px", mariContainerDiv.style.left = "50%", mariContainerDiv.classList.remove("marismoving"));
 }
