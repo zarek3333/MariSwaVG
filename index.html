@@ -579,7 +579,12 @@
             Your browser does not support the audio element.
         </audio>
     </div>
-    <div class=translation><button onclick="window.parent.location.href='index_ES.html'">Español</button></div>
+    <div class=translation><button onclick="window.parent.location.href='index_ES.html'" ontouchstart="myTouch()" style="text-transform:uppercase">Español</button></div>
     <script src=script/main.js></script>
+    <script>
+    function myTouch() {
+      window.parent.location.href='index_ES.html';
+    }
+</script>
 </body>
 </html>
