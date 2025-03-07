@@ -262,13 +262,17 @@ function clearShiftUpDownLayerHorizontalTimer() {
 function shiftMariToGroundLevel() {
     $(mariContainerDiv).stop().animate({
         bottom: containerDiv.offsetHeight - groundAndGrassContainer1Div.offsetTop + "px"
-    }, 300, function() {})
+    }, 300, function() {});
+    var swimaudio = $('.swimming')[0];    
+    swimaudio.pause();
 }
 
 function shiftMariToSeaFloor() {
     $(mariContainerDiv).stop().animate({
         bottom: seaFloorDiv.offsetHeight + "px"
-    }, 300, function() {})
+    }, 300, function() {});
+    var swimaudio = $('.swimming')[0];    
+    swimaudio.play();    
 }
 
 function positionLayerHorizontalToTop() {
@@ -318,7 +322,9 @@ function mariFall(e) {
 }
 
 function setMariJumpUpFrame() {
-    clearShiftMariFrameTimer(), isMariJumping = !0, mariFramesDiv.style.left = -1 * mariStartJumpFrame * mariOneFrameWidth + "px"
+    clearShiftMariFrameTimer(), isMariJumping = !0, mariFramesDiv.style.left = -1 * mariStartJumpFrame * mariOneFrameWidth + "px";
+    var jumpaudio = $('.jumping')[0];    
+    jumpaudio.play();
 }
 
 function setMariJumpDownAndFallFrame() {
